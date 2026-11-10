@@ -5,12 +5,10 @@
         static void Main(string[] args)
         {
 
-            Carro carro = new Carro("Fiat", "Vermelho");
-            
-            carro.Ligar();
-            carro.Acelerar(10);
-            carro.ExibirStatus();
+            Carro carro = new Carro("Fiat", "Vermelho", 4);
+            Moto moto = new Moto("Honda", "Preto", false);
 
+          
         }
     }
 }
