@@ -6,17 +6,18 @@ namespace IntroduçãoPOO
 {
     internal class Carro
     {
-        public string marca = "Marca Desconhecida";
-        public string cor = "Cor Desconhecida";
-        public int velocidade;
-        public bool ligado;
+        public string Marca { get; set; }
+        public string Cor { get; set; }
+        
+        public int Velocidade { get; private set; }
+
+        public bool Ligado { get; set; }
 
         public Carro (string marca, string cor)
         {
-            this.marca = marca;
-            this.cor = cor;
+            this.Marca = marca;
+            this.Cor = cor;
         } 
-
 
         public void Ligar()
         {
@@ -25,14 +26,14 @@ namespace IntroduçãoPOO
 
         public void Acelerar(int qtd)
         {
-            velocidade += qtd;
+            Velocidade += qtd;
         }
 
         public void ExibirStatus()
         {
-            Console.WriteLine($"{marca} {cor} a {velocidade} km/h");
+            Console.WriteLine($"{Marca} {Cor} a {Velocidade} km/h");
             // Console.WriteLine($"Ligado: {ligado}");
-            if (ligado == true)
+            if (Ligado == true)
             {
                 Console.WriteLine("Ligado...");
             }
@@ -45,12 +46,12 @@ namespace IntroduçãoPOO
 
         public bool EstaParado()
         {
-            return velocidade == 0;
+            return Velocidade == 0;
         }
 
         public string ObterDescricao()
         { 
-            return $"{marca} {cor}";
+            return $"{Marca} {Cor}";
         }
 
     }
