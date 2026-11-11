@@ -1,0 +1,40 @@
+﻿EXERCÍCIO 01
+1. Criar uma classe chamada ContaBancaria.
+2. Criar uma propriedade chamada Saldo, definindo o 
+   encapsulamento correto.
+3. Criar um método Depositar, que só aceita valores positivos.
+4. Criar o Método Sacar, que devolve um Booleano dizendo se
+   tinha ou não saldo para sacar.
+
+EXERCÍCIO 02
+1. Criar a Classe Animal, com (Nome), construtor e método Apresentar(),
+   que exibe "Eu sou o X"
+2. Criar as classes Cachorro e Gato, que herdam de Animal, cada uma
+   com um atributo próprio (Ex.: Raca e Pelagem), construtor e um método
+   próprio (Ex.: Miar() e Latir())
+3. No Main, criar um de cada chamando o método herdade e o próprio.
+
+EXERCÍCIO 03
+1. Criar a classe Motor (abstrata) com o método abstrato Ligar() (sem retorno).
+2. Criar as classes MotorCombustao (escreve Vruum! O motor a combustão ligou.) e 
+   MotorEletrico (escreve Silêncio... o motor elétrico ligou.).
+3. No Main, criar um motor de cada tipo e ligar os dois.
+
+EXERCÍCIO 04
+1. Criar a classe Notificacao com o método virtual string Formatar(string texto), 
+   que devolve o próprio texto.
+2. Criar a classe NotificacaoEmail: sobrescreve Formatar devolvendo "Assunto: Aviso | " 
+   seguido do texto do pai (base.Formatar(texto)).
+3. Criar a classe NotificacaoSms: sobrescreve Formatar cortando o texto em 20 caracteres 
+   e acrescentando "..." quando passar disso (sem usar base).
+4. No Main, um array de Notificacao com uma notificação comum, uma de e-mail e uma de SMS. 
+   Em um foreach, mostre Formatar("A prova de C# sera amanha") de cada uma.
+
+Saída esperada:
+A prova de C# sera amanha
+Assunto: Aviso | A prova de C# sera amanha
+A prova de C# sera a...
+
+DICA: para cortar o texto, use texto.Substring(0, 20) depois de verificar texto.Length > 20.
+DESAFIO: crie NotificacaoPush, que acrescenta "[PUSH] " no início do texto do pai, 
+         e inclua no array sem mudar o foreach.
