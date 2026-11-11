@@ -12,7 +12,11 @@ namespace IntroduçãoPOO
         public Carro(string marca, string cor, int portas) : base(marca, cor)
         {
             this.portas = portas;
-            Console.WriteLine("Construtor de Carros...");
+        }
+
+        public override void Buzinar()
+        {
+            Console.WriteLine("Biiiiiiiiiiiiiiiiiiiiii");
         }
 
         public void Abastecer(int litros)

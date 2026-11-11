@@ -4,7 +4,7 @@ using System.Text;
 
 namespace IntroduçãoPOO
 {
-    internal class Veiculo
+    abstract class Veiculo
     {
         public string Marca { get; set; }
         public string Cor { get; set; }
@@ -16,7 +16,13 @@ namespace IntroduçãoPOO
         {
             this.Marca = marca;
             this.Cor = cor;
-            Console.WriteLine("Construtor de Veículos...");
+        }
+
+        public abstract void Buzinar();
+
+        public virtual double CalcularPedagio()
+        {
+            return 10;
         }
 
         public void Ligar()
